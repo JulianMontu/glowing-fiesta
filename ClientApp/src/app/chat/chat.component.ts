@@ -4,6 +4,9 @@
     templateUrl: "./chat.component.html"
 })
 export class chatComponent {
-    public nombre = 'Julian'
+    public name = 'Julian'
+    public newName() {
+        this.name = "Julian.net" 
+    }
 
 }
