@@ -5,6 +5,8 @@ using Microsoft.AspNetCore.SpaServices.AngularCli;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.EntityFrameworkCore;
+using MyAngular.Models;
 
 namespace MyAngular
 {
@@ -26,6 +28,8 @@ namespace MyAngular
             {
                 configuration.RootPath = "ClientApp/dist";
             });
+            var connection = @"Server=.\MSSQLLocalDB;DataBase=AngularChat;Trusted_Connection=true;ConnectRetryCount=0";
+            services.AddDbContext<MyContextDB>(options => options.UseSqlServer(connection));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

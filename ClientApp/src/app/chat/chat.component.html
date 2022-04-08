@@ -1,4 +1,4 @@
-﻿<div>
-    hola {{name}}
-</div>
-<input type="button" (click)="newName()" value="Cambiar Nombre"/>
+﻿<app-message *ngFor="let regard of regards" [texto]="regard">
+    {{regard}}
+
+</app-message>

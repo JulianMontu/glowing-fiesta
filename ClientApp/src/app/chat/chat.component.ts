@@ -4,9 +4,5 @@
     templateUrl: "./chat.component.html"
 })
 export class chatComponent {
-    public name = 'Julian'
-    public newName() {
-        this.name = "Julian.net" 
-    }
-
+    public regards: string[] = ["buenos dias","buenas tardes","buenas noches"];
 }
